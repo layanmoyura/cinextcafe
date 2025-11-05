@@ -33,13 +33,13 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 25px; /* Increased padding for wider screens */
+    padding: 0 25px; 
 }
 
 h1, h2, h3 {
     line-height: 1.2;
     margin-bottom: 1rem;
-    font-weight: 600; /* Slightly bolder for titles */
+    font-weight: 600; 
 }
 
 h1 {
@@ -89,14 +89,14 @@ ul {
 }
 
 .section-padding {
-    padding: 6rem 0; /* More vertical spacing for sections */
+    padding: 6rem 0; 
 }
 
 .section-subtitle {
     text-align: center;
     font-size: 1.15rem;
     color: #aaa;
-    margin-top: -1rem; /* Adjust to be closer to h2 */
+    margin-top: -1rem; 
     margin-bottom: 3rem;
     max-width: 700px;
     margin-left: auto;
@@ -105,7 +105,7 @@ ul {
 
 /* =========== Header / Navigation =========== */
 header {
-    background: var(--bg-dark); /* Darker header */
+    background: var(--bg-dark); 
     border-bottom: 1px solid var(--secondary-color);
     padding: 0.8rem 0;
     position: sticky;
@@ -122,7 +122,7 @@ header nav {
 }
 
 .logo img {
-    height: 65px; /* Slightly larger logo */
+    height: 65px; 
     width: auto;
     transition: transform 0.3s ease;
 }
@@ -136,7 +136,7 @@ header nav {
 }
 
 .nav-links li {
-    margin-left: 2.5rem; /* More spacing */
+    margin-left: 2.5rem; 
 }
 
 .nav-links a {
@@ -163,7 +163,7 @@ header nav {
 }
 
 .nav-links a:hover::after,
-.nav-links a.active::after { /* Active state for current page */
+.nav-links a.active::after { 
     width: 100%;
 }
 
@@ -176,12 +176,12 @@ header nav {
 
 /* =========== Hero Section =========== */
 #hero {
-    height: 85vh; /* Taller hero */
+    height: 85vh; 
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
                 url('https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80') no-repeat center center/cover;
     position: relative;
     overflow: hidden;
@@ -208,7 +208,7 @@ header nav {
 }
 
 .cta-button {
-    display: inline-flex; /* Use flex for icon alignment */
+    display: inline-flex; 
     align-items: center;
     gap: 10px;
     background: var(--primary-color);
@@ -256,27 +256,23 @@ header nav {
 
 
 /* =========== Package Sections =========== */
-#packages, #party-packages {
-    background-color: var(--bg-dark);
-}
-
 .package-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2.5rem; /* Increased gap */
+    gap: 2.5rem; 
 }
 
 .package-card {
     background: var(--bg-light-dark);
     border: 1px solid var(--border-color);
     border-radius: 12px;
-    padding: 2.5rem 2rem; /* More padding */
+    padding: 2.5rem 2rem; 
     text-align: center;
     box-shadow: 0 5px 20px var(--shadow-light);
     transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
-    display: flex; /* Use flexbox for internal layout */
+    display: flex; 
     flex-direction: column;
-    justify-content: space-between; /* Push CTA to bottom */
+    justify-content: space-between; 
 }
 
 .package-card:hover {
@@ -289,10 +285,6 @@ header nav {
     font-size: 3.5rem;
     color: var(--primary-color);
     margin-bottom: 1rem;
-}
-
-.package-card h3 {
-    margin-top: 0.5rem; /* Adjust spacing */
 }
 
 .package-card .price {
@@ -312,7 +304,7 @@ header nav {
 .package-card ul {
     margin-top: 1.5rem;
     text-align: left;
-    flex-grow: 1; /* Make list take up available space */
+    flex-grow: 1; 
 }
 
 .package-card ul li {
@@ -332,13 +324,13 @@ header nav {
 }
 
 .package-card .card-cta {
-    display: inline-block;
+    display: block; /* Ensures CTA takes full width on mobile if needed */
     background: var(--primary-color);
     color: var(--text-dark);
     font-weight: 600;
     padding: 0.7rem 1.5rem;
     border-radius: 6px;
-    margin-top: 2rem; /* Push down */
+    margin-top: 2rem; 
     transition: background-color 0.3s ease, transform 0.3s ease;
     font-size: 0.95rem;
 }
@@ -353,41 +345,21 @@ header nav {
     border-color: var(--primary-color);
     background: linear-gradient(135deg, var(--bg-light-dark) 0%, #25201b 100%);
 }
-.package-card.special .card-icon {
-    color: #fff;
-    text-shadow: 0 0 10px var(--primary-color);
-}
-.package-card.special h3, .package-card.special .price {
-    color: #fff;
-}
-.package-card.special .price-note {
-    color: #ccc;
-}
-.package-card.special ul li i {
-    color: #fff;
-}
+.package-card.special .card-icon { color: #fff; text-shadow: 0 0 10px var(--primary-color); }
+.package-card.special h3, .package-card.special .price { color: #fff; }
+.package-card.special .price-note { color: #ccc; }
+.package-card.special ul li i { color: #fff; }
 
 /* Party card specific styling */
 .package-card.party {
-    border-color: #a050a0; /* A party-ish color */
+    border-color: #a050a0; 
     background: linear-gradient(135deg, var(--bg-light-dark) 0%, #2e1e2e 100%);
 }
-.package-card.party h3, .package-card.party .price {
-    color: #f0d0f0;
-}
-.package-card.party .card-icon {
-    color: #f0d0f0;
-}
-.package-card.party ul li i {
-    color: #f0d0f0;
-}
-.package-card.party .card-cta {
-    background-color: #a050a0;
-    color: #fff;
-}
-.package-card.party .card-cta:hover {
-    background-color: #c070c0;
-}
+.package-card.party h3, .package-card.party .price { color: #f0d0f0; }
+.package-card.party .card-icon { color: #f0d0f0; }
+.package-card.party ul li i { color: #f0d0f0; }
+.package-card.party .card-cta { background-color: #a050a0; color: #fff; }
+.package-card.party .card-cta:hover { background-color: #c070c0; }
 
 
 /* =========== Add-ons Section =========== */
@@ -401,7 +373,7 @@ header nav {
 .add-on-list {
     display: flex;
     justify-content: center;
-    gap: 3rem; /* More gap */
+    gap: 3rem; 
     flex-wrap: wrap;
     font-size: 1.3rem;
     padding: 2rem 0;
@@ -486,97 +458,110 @@ footer .container {
     transform: translateY(-3px);
 }
 
-/* =========== Responsive (Mobile) =========== */
+/* =========== Responsive (Mobile-First Overrides) =========== */
+/* Targets devices up to 992px (Tablets) */
 @media (max-width: 992px) {
     h1 { font-size: 3.5rem; }
     h2 { font-size: 2.5rem; }
     .hero-content p { font-size: 1.4rem; }
+
+    /* Adjust package card grid for smaller tablets */
+    .package-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
 }
 
+/* Targets devices up to 768px (Most common mobile breakpoint) */
 @media (max-width: 768px) {
     .container {
         padding: 0 15px;
     }
+    .section-padding {
+        padding: 4rem 0; /* Reduced vertical padding */
+    }
+
+    /* Hero adjustments */
+    #hero {
+        height: 70vh;
+    }
     h1 { font-size: 3rem; }
     h2 { font-size: 2.2rem; }
     .hero-content p { font-size: 1.2rem; }
-    .cta-button { padding: 0.9rem 2rem; font-size: 1rem; }
+    .cta-button { 
+        padding: 0.9rem 2rem; 
+        font-size: 1rem;
+    }
 
     .logo img {
         height: 55px;
     }
 
+    /* Mobile Navigation */
     .menu-toggle {
         display: block;
     }
-
     .nav-links {
         display: none;
         flex-direction: column;
         width: 100%;
         position: absolute;
-        top: 81px; /* Height of header + border */
+        top: 81px; 
         left: 0;
         background: var(--bg-dark);
         border-bottom: 1px solid var(--secondary-color);
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
         padding: 1rem 0;
     }
-    
     .nav-links.active {
         display: flex;
     }
-
     .nav-links li {
         margin: 0;
-        text-align: center;
-        width: 100%;
     }
-
     .nav-links a {
-        display: block;
         padding: 0.8rem;
         border-bottom: 1px solid #282828;
     }
-    .nav-links li:last-child a {
-        border-bottom: none;
-    }
 
+    /* Package Cards (For phones, they should generally stack) */
+    .package-container {
+        grid-template-columns: 1fr; /* Full width cards */
+        gap: 2rem;
+    }
     .package-card {
-        padding: 2rem 1.5rem;
+        padding: 2rem;
     }
-
-    .package-card .card-icon {
-        font-size: 3rem;
-    }
-
     .package-card h3 {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
-
-    .package-card .price {
-        font-size: 2rem;
+    .package-card ul li {
+        font-size: 1rem;
     }
-
+    
+    /* Add-ons List */
     .add-on-list {
         gap: 1.5rem;
-        flex-direction: column; /* Stack add-ons vertically */
+        flex-direction: column; 
         align-items: center;
     }
     .add-on-list li {
-        width: 90%; /* Make list items take more width */
-        max-width: 350px;
+        width: 100%; /* Full width in container */
+        max-width: 400px;
+        font-size: 1.1rem;
     }
 }
 
+/* Targets smaller phones */
 @media (max-width: 480px) {
     h1 { font-size: 2.5rem; }
     h2 { font-size: 2rem; }
     .hero-content p { font-size: 1rem; }
     .cta-button { padding: 0.8rem 1.8rem; font-size: 0.9rem; }
-    .section-padding { padding: 4rem 0; }
     .package-card {
         padding: 1.5rem;
+    }
+    .package-card .card-icon {
+        font-size: 2.5rem;
     }
     .package-card h3 {
         font-size: 1.4rem;

@@ -18,8 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Optional: Add 'active' class to current nav link (if you want to highlight)
-    // This is a simple example, a more robust solution might use an IntersectionObserver
+    // Optional: Add 'active' class to current nav link 
     const sections = document.querySelectorAll('main section');
     const navLi = document.querySelectorAll('.nav-links li');
 
@@ -28,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
-            if (pageYOffset >= sectionTop - sectionHeight / 3) { // Adjust offset for better accuracy
+            if (pageYOffset >= sectionTop - sectionHeight / 3) {
                 current = section.getAttribute('id');
             }
         });
