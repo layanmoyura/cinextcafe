@@ -569,6 +569,8 @@ footer .container {
     .package-container {
         grid-template-columns: 1fr; /* Full width cards */
         gap: 2rem;
+
+        padding: 0 15px; /* Add 15px margin from the device edge */
     }
     .package-card {
         padding: 2rem;
@@ -596,6 +598,7 @@ footer .container {
     .contact-details {
         flex-direction: column;
         align-items: center;
+        padding: 0 15px; /* Add 15px margin from the device edge */
     }
     .detail-card {
         max-width: 100%;
