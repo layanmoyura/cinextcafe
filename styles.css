@@ -407,7 +407,7 @@ header nav {
     margin-right: 0.5rem;
 }
 
-/* =========== Contact Section =========== */
+/* =========== Contact Section Updates =========== */
 #contact {
     text-align: center;
 }
@@ -418,8 +418,50 @@ header nav {
     color: #ccc;
 }
 
+.contact-details {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    margin-top: 3rem;
+    flex-wrap: wrap; /* Allows cards to wrap on mobile */
+}
+
+.detail-card {
+    background: var(--bg-light-dark);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    flex: 1 1 300px; /* Flex basis for responsiveness */
+    max-width: 350px;
+    box-shadow: 0 4px 15px var(--shadow-light);
+    transition: transform 0.3s ease;
+}
+
+.detail-card:hover {
+    transform: translateY(-5px);
+}
+
+.detail-card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.detail-card h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.detail-card p {
+    font-size: 1rem;
+    color: #aaa;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
 .contact-info {
-    font-size: 1.1rem;
+    font-size: 1.05rem; 
     color: #aaa;
     margin-top: 1.5rem;
 }
@@ -548,6 +590,16 @@ footer .container {
         width: 100%; /* Full width in container */
         max-width: 400px;
         font-size: 1.1rem;
+    }
+
+    /* Contact Details Stacking */
+    .contact-details {
+        flex-direction: column;
+        align-items: center;
+    }
+    .detail-card {
+        max-width: 100%;
+        width: 100%;
     }
 }
 
