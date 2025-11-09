@@ -500,6 +500,22 @@ footer .container {
     transform: translateY(-3px);
 }
 
+.dev-by {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 1.5rem;
+    font-style: italic;
+}
+
+.dev-by a {
+    color: #888;
+    transition: color 0.3s ease;
+}
+
+.dev-by a:hover {
+    color: var(--primary-color);
+}
+
 /* =========== Responsive (Mobile-First Overrides) =========== */
 /* Targets devices up to 992px (Tablets) */
 @media (max-width: 992px) {
