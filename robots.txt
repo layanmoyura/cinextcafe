@@ -1,0 +1,5 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://cinextcafe.lk/sitemap.xml
+Host: cinextcafe.lk
