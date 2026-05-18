@@ -287,7 +287,7 @@ header nav {
     gap: 1.5rem;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 3rem;
+    margin-bottom: 0;
     animation: fadeInUp 1s ease-out 0.6s backwards;
 }
 
@@ -349,36 +349,6 @@ header nav {
     color: var(--text-dark);
     border-color: var(--primary-color);
     box-shadow: 0 8px 25px rgba(224, 180, 138, 0.3);
-}
-
-.hero-stats {
-    display: flex;
-    justify-content: center;
-    gap: 4rem;
-    flex-wrap: wrap;
-    animation: fadeInUp 1s ease-out 0.9s backwards;
-}
-
-.stat {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.stat-number {
-    font-size: 2rem;
-    font-weight: 700;
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.stat-label {
-    font-size: 0.85rem;
-    color: #aaa;
-    letter-spacing: 0.5px;
 }
 
 /* Animations */
@@ -456,6 +426,11 @@ header nav {
     background: linear-gradient(135deg, #ffd700, #ffed4e);
 }
 
+.package-card.platinum .card-badge {
+    background: linear-gradient(135deg, #e5e4e2, #c0c0c0);
+    color: #1a1a1a;
+}
+
 .package-card.party .card-badge {
     background: linear-gradient(135deg, #ff69b4, #ff1493);
 }
@@ -489,6 +464,10 @@ header nav {
     margin-bottom: 1rem;
     transition: transform 0.3s ease;
     display: block;
+}
+
+.package-card.platinum .card-icon {
+    color: #c0c0c0;
 }
 
 .package-card:hover .card-icon {
@@ -549,6 +528,10 @@ header nav {
     flex-shrink: 0;
 }
 
+.package-card.platinum .features li i {
+    color: #c0c0c0;
+}
+
 .features li span {
     flex: 1;
 }
@@ -576,6 +559,11 @@ header nav {
 
 .card-cta:active {
     transform: translateY(-1px);
+}
+
+.package-card.platinum .card-cta {
+    background: linear-gradient(135deg, #c0c0c0, #e5e4e2);
+    color: #1a1a1a;
 }
 
 .package-card.special {
@@ -899,16 +887,12 @@ footer p {
 
     .hero-cta {
         gap: 1rem;
-        margin-bottom: 2.5rem;
+        margin-bottom: 0;
     }
 
     .cta-button {
         padding: 0.9rem 2rem;
         font-size: 0.95rem;
-    }
-
-    .hero-stats {
-        gap: 2.5rem;
     }
 
     .logo {
@@ -1072,23 +1056,11 @@ footer p {
     .hero-cta {
         gap: 0.8rem;
         flex-direction: column;
-        margin-bottom: 2rem;
+        margin-bottom: 0;
     }
 
     .hero-cta .cta-button {
         width: 100%;
-    }
-
-    .hero-stats {
-        gap: 1.5rem;
-    }
-
-    .stat-number {
-        font-size: 1.6rem;
-    }
-
-    .stat-label {
-        font-size: 0.75rem;
     }
 
     .card-badge {
